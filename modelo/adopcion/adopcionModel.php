@@ -26,7 +26,9 @@ class AdopcionModelo
 
  	function verAdopcion()
  	{
- 		$sql = "SELECT * FROM adopcion WHERE idAdopcion = 1";
+ 		//$registros[];
+ 		
+ 		$sql = "SELECT * FROM adopcion WHERE idAdopcion = 10";
  		
  		$result = $this->bd->ejecutar($sql);
 

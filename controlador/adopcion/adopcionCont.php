@@ -11,7 +11,8 @@ $adopcionModelo = new AdopcionModelo();
 	 	   $edad = $_POST["edad"];
 	 	   $descr = $_POST["descripcion"];
 	 	   $contacto = $_POST["contacto"];
-	 	   $foto = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
+	 	   $foto  = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
+	 	   
 	 	  
 	 	 $adopcionModelo->nueva_adopcion ($tipo, $nom, $gen, $color, $raza, $tamaño, $edad, $descr, $contacto, $foto);
 ?>

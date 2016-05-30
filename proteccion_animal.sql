@@ -28,7 +28,7 @@ CREATE TABLE adopcion (
   edad VARCHAR (20) NOT NULL,
   descripcion VARCHAR(140) NOT NULL,
   contacto VARCHAR(50) NOT NULL,
-  foto LONGBLOB NOT NULL,
+  foto MEDIUMBLOB NOT NULL,
   PRIMARY KEY(idAdopcion),
   FOREIGN KEY(tipoAnimal) REFERENCES animal(tipoAnimal)
 );
@@ -45,7 +45,7 @@ CREATE TABLE extraviado (
   edad VARCHAR (20) NOT NULL,
   descripcion VARCHAR(140) NOT NULL,
   contacto VARCHAR(50) NOT NULL,
-  foto LONGBLOB NOT NULL,
+  foto MEDIUMBLOB NOT NULL,
   PRIMARY KEY(idExtraviado),
   FOREIGN KEY(tipoAnimal) REFERENCES animal(tipoAnimal)
 );
@@ -56,7 +56,8 @@ CREATE TABLE denuncia(
   ubicacion VARCHAR(60) NOT NULL,
   descripcion VARCHAR(250) NOT NULL,
   anexo VARCHAR(100) NOT NULL,
-  PRIMARY KEY(idDenuncia)
+  PRIMARY KEY(idDenuncia),
+  FOREIGN KEY(idUsuario) REFERENCES usuario(nickname)
 );
 
 CREATE TABLE anuncio(
@@ -65,7 +66,7 @@ CREATE TABLE anuncio(
   titulo VARCHAR(50) NOT NULL,
   descripcion VARCHAR(250) NOT NULL,
   fechaEvento DATE NOT NULL,
-  foto LONGBLOB NOT NULL,
+  foto MEDIUMBLOB NOT NULL,
   PRIMARY KEY(idAnuncio),
   FOREIGN KEY(idUsuario) REFERENCES usuario(nickname)
 );

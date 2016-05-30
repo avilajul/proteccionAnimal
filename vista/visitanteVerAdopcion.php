@@ -35,19 +35,64 @@ $adopcion = $adopcionModelo->verAdopcion();
 		<div class="row">
 		<div class="col s12 m6 l6">
 		<?php
-			echo $id = $adopcion['idAdopcion'];
+			
+			//$id = $adopcion['idAdopcion'];
+/*			if(is_null($id))
+			{
+				echo "No hay Mascotas disponibles para adopción";
+
+			}
+			else
+			{*/
+				//echo $id;
+				?>
+				<img src="data:image/jpg;base64,<?php echo base64_encode($adopcion['foto']);?>" alt="" height="200px">
+				<?php
+		//	}			 
 			echo "<br>";
 		?>
-		<img src="data:image/jpg;base64,<?php echo base64_encode($adopcion['foto']);?>" alt="" widht:"50%" height:"50%">
+		
 
 		</div>
 		<aside class="col s12 m6 l6 center-align">
 			<h4 class="center-align">Entes Encargados</h4>
 			<img src="lib/images/policia.jpg" >
 			<img src="lib/images/tulua.png" >
-
 		</aside>
 		</div>
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal">
+	<div class="modal-content">
+	  <h4>Inicia sesion</h4>
+	  <div class="row">
+	  	<form action="../controlador/sesion/validaSesion.php" method="POST" class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="mdi-action-account-circle prefix"></i>
+					<input type="text" name="usuario" id="icon_prefix" class="validate" required="">
+					<label for="icon_prefix">Usuario</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="mdi-action-lock prefix"></i>
+					<input type="password" name="contrasena" id="password" class="validate" required="">
+					<label for="password" class>Contraseña</label>
+				</div>
+			</div>
+				<div class="row modal-footer">
+				<button class="btn green waves-effect left waves-light col m6 l3 s12" type="submit" name="login">Iniciar sesión			
+					</button>  				
+					</div>
+	  	</form>
+	  </div>
+	</div>	
+	<div class="modal-footer">	     
+	  <a href="registroUsuario/crearCuenta.php" class=" green-text modal-action modal-close waves-effect waves-green btn-flat">Crear cuenta</a>
+	</div>
+	</div>
+
+		
 	</main>
 	<?php include ("componentes/footer.php");?>
  <!--Import jQuery before materialize.js-->

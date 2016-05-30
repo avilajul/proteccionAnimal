@@ -19,4 +19,3 @@ echo $id = $adopcion['idAdopcion'];
 
 	require('../../vista/vistanteVerAdopcion.php');
 ?>
-<img src="data:image/jpg;base64,<?php echo base64_encode($adopcion['foto']);?>" alt="" widht:"50%" height:"50%">

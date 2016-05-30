@@ -99,6 +99,39 @@
 			<img src="lib/images/tulua.png" >
 		</aside>
 		</div>
+
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal">
+	<div class="modal-content">
+	  <h4>Inicia sesion</h4>
+	  <div class="row">
+	  	<form action="../controlador/sesion/validaSesion.php" method="POST" class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="mdi-action-account-circle prefix"></i>
+					<input type="text" name="usuario" id="icon_prefix" class="validate" required="">
+					<label for="icon_prefix">Usuario</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="mdi-action-lock prefix"></i>
+					<input type="password" name="contrasena" id="password" class="validate" required="">
+					<label for="password" class>Contraseña</label>
+				</div>
+			</div>
+				<div class="row modal-footer">
+				<button class="btn green waves-effect left waves-light col m6 l3 s12" type="submit" name="login">Iniciar sesión			
+					</button>  				
+				</div>
+	  	</form>
+	  </div>
+	</div>	
+	<div class="modal-footer">	     
+	  <a href="registroUsuario/crearCuenta.php" class=" green-text modal-action modal-close waves-effect waves-green btn-flat">Crear cuenta</a>
+	</div>
+	</div>
+
 	</main>
 	<?php include ("componentes/footer.php");?>
  <!--Import jQuery before materialize.js-->
@@ -116,6 +149,10 @@
     	$('select').material_select();
     	$(document).ready(function() {    		
   		});
+  		$(document).ready(function(){
+		    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+		    $('.modal-trigger').leanModal();
+		  });
       </script> 
 </body>
 </html>
