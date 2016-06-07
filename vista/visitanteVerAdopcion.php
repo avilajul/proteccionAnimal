@@ -9,8 +9,9 @@ $_POST['archivo'] = $nombre_archivo;
 
 require ('../modelo/adopcion/adopcionModel.php');
 $adopcionModelo = new AdopcionModelo();
+$adopcion= null;
 
-$adopcion = $adopcionModelo->verAdopcion();	
+$adopcion = $adopcionModelo->verAdopcion();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -32,34 +33,123 @@ $adopcion = $adopcionModelo->verAdopcion();
 	</header>
 	<main>
 		<h3  class="center-align green-text titulo">Ver Mascotas en Adopción</h3>
-		<div class="row">
-		<div class="col s12 m6 l6">
 		<?php
-			
+
 			//$id = $adopcion['idAdopcion'];
-/*			if(is_null($id))
+			if(is_null($adopcion))
 			{
 				echo "No hay Mascotas disponibles para adopción";
 
 			}
 			else
-			{*/
-				//echo $id;
+			{
 				?>
-				<img src="data:image/jpg;base64,<?php echo base64_encode($adopcion['foto']);?>" alt="" height="200px">
+				<div class="row">
+				<div class="col s12 m3 l3">
+					<div class="card hoverable">
+					    <div class="card-image waves-effect waves-block waves-light">
+					      <img class="activator" src="data:image/jpg;base64,<?php echo base64_encode($adopcion['foto']);?>" alt="">
+					    </div>
+					    <div class="card-content">
+					      <span class="card-title activator grey-text text-darken-4"><?php echo $adopcion['nombre'] ?><i class="mdi-navigation-more-vert right"></i></span>
+					      <p><a href="#">This is a link</a></p>
+					    </div>
+					    <div class="card-reveal">
+					      <span class="card-title grey-text text-darken-4"><?php echo $adopcion['nombre'] ?><i class="mdi-navigation-close right"></i></span>
+					      <p><?php echo nl2br("Genero: ".$adopcion['genero'].
+                                    "\n"."Color: ".$adopcion['color'].
+                                    "\n"."Raza: ".$adopcion['raza'].
+                                    "\n"."tamaño: ".$adopcion['tamano'].
+                                    "\n"."Edad: ".$adopcion['edad'].
+                                    "\n"."".$adopcion['descripcion'].
+                                    "\n"."Contacto: ".$adopcion['contacto']."");
+                    ?>
+                </p>
+					    </div>
+					  </div>
+				</div>
+				<div class="col s12 m3 l3">
+					<div class="card hoverable">
+					    <div class="card-image waves-effect waves-block waves-light">
+					      <img class="activator" src="lib/images/marcha.jpg">
+					    </div>
+					    <div class="card-content">
+					      <span class="card-title activator grey-text text-darken-4">Marcha<i class="mdi-navigation-more-vert right"></i></span>
+					      <p><a href="#">This is a link</a></p>
+					    </div>
+					    <div class="card-reveal">
+					      <span class="card-title grey-text text-darken-4">Marcha<i class="mdi-navigation-close right"></i></span>
+					      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+					    </div>
+					  </div>
+				</div>
+        <div class="col s12 m3 l3">
+          <div class="card hoverable">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="lib/images/marcha.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Marcha<i class="mdi-navigation-more-vert right"></i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Marcha<i class="mdi-navigation-close right"></i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+        </div>
+        <div class="col s12 m3 l3">
+          <div class="card hoverable">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="lib/images/marcha.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Marcha<i class="mdi-navigation-more-vert right"></i></span>
+                <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Marcha<i class="mdi-navigation-close right"></i></span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+            </div>
+        </div>
+				</div>
+        <div class="row">
+          <div class="col s12 m3 l3">
+            <div class="card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="lib/images/marcha.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Marcha<i class="mdi-navigation-more-vert right"></i></span>
+                  <p><a href="#">This is a link</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Marcha<i class="mdi-navigation-close right"></i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col s12 m3 l3">
+            <div class="card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="lib/images/marcha.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Marcha<i class="mdi-navigation-more-vert right"></i></span>
+                  <p><a href="#">This is a link</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Marcha<i class="mdi-navigation-close right"></i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+              </div>
+          </div>
+          </div>
 				<?php
-		//	}			 
-			echo "<br>";
-		?>
-		
+			}
+      ?>
 
-		</div>
-		<aside class="col s12 m6 l6 center-align">
-			<h4 class="center-align">Entes Encargados</h4>
-			<img src="lib/images/policia.jpg" >
-			<img src="lib/images/tulua.png" >
-		</aside>
-		</div>
 	<!-- Modal Structure -->
 	<div id="modal1" class="modal">
 	<div class="modal-content">
@@ -81,18 +171,18 @@ $adopcion = $adopcionModelo->verAdopcion();
 				</div>
 			</div>
 				<div class="row modal-footer">
-				<button class="btn green waves-effect left waves-light col m6 l3 s12" type="submit" name="login">Iniciar sesión			
-					</button>  				
+				<button class="btn green waves-effect left waves-light col m6 l3 s12" type="submit" name="login">Iniciar sesión
+					</button>
 					</div>
 	  	</form>
 	  </div>
-	</div>	
-	<div class="modal-footer">	     
+	</div>
+	<div class="modal-footer">
 	  <a href="registroUsuario/crearCuenta.php" class=" green-text modal-action modal-close waves-effect waves-green btn-flat">Crear cuenta</a>
 	</div>
 	</div>
 
-		
+
 	</main>
 	<?php include ("componentes/footer.php");?>
  <!--Import jQuery before materialize.js-->
@@ -112,8 +202,8 @@ $adopcion = $adopcionModelo->verAdopcion();
       	$('.slider').slider({full_width: true});
     	});
     	$('select').material_select();
-    	$(document).ready(function() {    		
+    	$(document).ready(function() {
   		});
-      </script>	      	      
+      </script>
 </body>
 </html>

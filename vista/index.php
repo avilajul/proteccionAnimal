@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="lib/css/styl.css">
 	<title>Protección Animal</title>
 </head>
-<body class="">	
+<body class="">
 	<header class="center-align">
 	<?php include ("componentes/menuVisitante.php");?>
 	</header>
@@ -28,12 +28,12 @@
 	  </li>
 	  <li>
 	    <img src="lib/images/slide2.jpg" > <!-- random image -->
-	    <div class="caption left-align">	      
+	    <div class="caption left-align">
 	    </div>
 	  </li>
 	  <li>
 	    <img src="lib/images/slide3.jpg" > <!-- random image -->
-	    <div class="caption right-align">	           
+	    <div class="caption right-align">
 	    </div>
 	  </li>
 	  <li>
@@ -66,13 +66,13 @@
 				</div>
 			</div>
 				<div class="row modal-footer">
-				<button class="btn green waves-effect left waves-light col m6 l3 s12" type="submit" name="login">Iniciar sesión			
-					</button>  				
+				<button class="btn green waves-effect left waves-light col m6 l3 s12" type="submit" name="login">Iniciar sesión
+					</button>
 					</div>
 	  	</form>
 	  </div>
-	</div>	
-	<div class="modal-footer">	     
+	</div>
+	<div class="modal-footer">
 	  <a href="registroUsuario/crearCuenta.php" class=" green-text modal-action modal-close waves-effect waves-green btn-flat">Crear cuenta</a>
 	</div>
 	</div>
@@ -108,7 +108,7 @@
 				      <span class="card-title grey-text text-darken-4">Jornada de Vacunación<i class="mdi-navigation-close right"></i></span>
 				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
 				    </div>
-				  </div>				
+				  </div>
 			</div>
 			<div class="col s12 m6 l4">
 				<div class="card hoverable">
@@ -123,9 +123,9 @@
 				      <span class="card-title grey-text text-darken-4">Marcha<i class="mdi-navigation-close right"></i></span>
 				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
 				    </div>
-				  </div>				
+				  </div>
 			</div>
-			</div>			
+			</div>
 		</section>
 		<aside class="col s12 m6 l3 center-align">
 			<h4 class="center-align">Entes Encargados</h4>
@@ -146,14 +146,14 @@
 	        	<h5 class="white-text">Autores</h5>
 	        	<ul>
 	          		<li><a class="grey-text text-lighten-3" href="#!">Julián Eduardo Avila</a></li>
-	          		<li><a class="grey-text text-lighten-3" href="#!">Andrés Mauricio Hoyos</a></li>                 
+	          		<li><a class="grey-text text-lighten-3" href="#!">Andrés Mauricio Hoyos</a></li>
 	        	</ul>
 	      	</div>
 		</div>
 	</div>
 	<div class="footer-copyright">
 	<div class="container ">
-	© 2015 Copyright            
+	© 2015 Copyright
 	</div>
 	</div>
 	</footer>
